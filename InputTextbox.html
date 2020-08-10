@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>InputText</title>
+</head>
+<body>
+
+    <input id="i1" type="text" value="input pls" onfocus="Focus();" onblur="Blur()"/>
+
+    <script>
+
+     a = document.getElementById("i1");  
+        function Focus(){
+            
+            if (a.value == "input pls"){
+                a.value = "";
+            }
+        }
+        function Blur(){
+            if (a.value == ""){
+                document.getElementById("i1").value = "input pls"
+            }
+        }
+    </script>
+    
+</body>
+</html>

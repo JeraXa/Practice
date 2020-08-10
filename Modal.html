@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Dialogue Box</title>
+    <style>
+        
+        .modal {
+            position: fixed;
+            background-color: steelblue;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .dialog {
+            height: 200px;
+            width: 300px;
+            background-color: thistle;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -150px;
+            z-index: 2;
+        }
+        .hide{
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <input type="button" value="Submit" onclick="showDialog()"/>
+    </div>
+
+    <div id="dialog" class="dialog hide">
+        <input type="button" value="Cancel" onclick="CancelDialog()"/>
+    </div>
+    <div id="Modal" class="modal hide"></div>
+
+    <script>
+        function showDialog(){
+            var s1 = document.getElementById("dialog");
+            var s2 = document.getElementById("Modal");
+            s1.classList.remove("hide");
+            s2.classList.remove("hide");
+        }
+        function CancelDialog(){
+            var s1 = document.getElementById("dialog");
+            var s2 = document.getElementById("Modal");
+            s1.classList.add("hide");
+            s2.classList.add("hide");
+        }
+    </script>
+
+</body>
+</html>

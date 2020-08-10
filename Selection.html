@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="button" value="全选" onclick="checkAll()" />
+    <input type="button" value="取消" onclick="checkCancel()" />
+    <input type="button" value="反选" onclick="checkReserve()" />
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>选择器</th>
+                <th>用户名</th>
+                <th>密码</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>3</td>
+                <td>33</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+        function checkAll() {
+            var getTb = document.getElementById("tb").children;
+            for (var i = 0; i < getTb.length; i++) {
+                var getTr = getTb[i];
+                var cb = getTr.firstElementChild.firstElementChild;
+                cb.setAttribute("checked", "checked");
+            }
+        }
+
+        function checkCancel() {
+            var getTb = document.getElementById("tb").children;
+            for (var i = 0; i < getTb.length; i++) {
+                var getTr = getTb[i];
+                var cb = getTr.firstElementChild.firstElementChild;
+                cb.removeAttribute("checked", "checked");
+            }
+        }
+
+        function checkReserve() {
+            var getTb = document.getElementById("tb").children;
+            for (var i = 0; i < getTb.length; i++) {
+                var getTr = getTb[i];
+                var cb = getTr.firstElementChild.firstElementChild;
+                if (cb.checked) {
+                    cb.checked = false;
+                    cb.removeAttribute("checked", "checked");
+                } else {
+                    cb.checked = true;
+                    cb.setAttribute("checked", "checked");
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

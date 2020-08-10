@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3cLearning</title>
+
+
+</head>
+<body>
+    <p>number plus</p>
+    <p id="i1"></p>
+
+    <p id="i2"></p>
+    <p>--------------------------------------------------------------------------</p>
+
+    <p id="i3">zizengzijian</p>
+    <p id="i4">zizen</p>
+ <p>--------------------------------------------------------------------------</p>
+    <p id="i5"></p>
+
+    <p>--------------------------------------------------------------------------</p>
+
+    <p id="nv">NV</p>    <!--//name:value-->
+
+    <script>
+        var n = document.getElementById("i1").innerHTML = 6 * 8;
+    </script>
+   
+    <script>
+        var x = 7,y = 8, z = x + y;
+        document.getElementById("i2").innerHTML = x ** y;
+
+    </script>
+    
+    <script>
+        var x = 10;y = 5;
+        x++;
+        --y;
+        x *= y;
+        y += x;
+        document.getElementById("i3").innerHTML = x + 12e2;
+        document.getElementById("i4").innerHTML = y;
+    </script>
+
+    <script>
+        var n = 911,s = "Porsche";
+        document.getElementById("i5").innerHTML = n + "<" + "br" + '/>' + s + "6V";
+    </script>
+
+    <script>
+        var person = {
+            firstName : "ice",
+            lastName : "Jerax",
+            age : 26,
+            skinColor : "yellow"
+
+        };
+        document.getElementById("nv").innerHTML = "IAM " + person.age + " Iam " + person.firstName + " "
+        + person.lastName;
+    </script>
+
+</body>
+</html>
